@@ -2,7 +2,14 @@ import { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 
 import { excluir, editar } from '../../store/reducers/contatos'
-import { Td, TdExcluir, TextArea } from './styles'
+import {
+  BotaoEditar,
+  BotaoSalvar,
+  BotaoTabela,
+  Td,
+  TdExcluir,
+  TextArea
+} from './styles'
 import Contatos from '../../models/Contatos'
 
 type Props = Contatos
@@ -58,7 +65,7 @@ const Tabela = ({ nome, numero, email }: Props) => {
       </Td>
       {editando ? (
         <>
-          <TdExcluir
+          <BotaoSalvar
             onClick={() => {
               dispatch(
                 editar({
@@ -71,17 +78,15 @@ const Tabela = ({ nome, numero, email }: Props) => {
             }}
           >
             Salvar
-          </TdExcluir>
-          <TdExcluir onClick={() => cancelarEdicao()}>Cancelar</TdExcluir>
+          </BotaoSalvar>
+          <BotaoTabela onClick={() => cancelarEdicao()}>Cancelar</BotaoTabela>
         </>
       ) : (
         <>
-          <TdExcluir onClick={() => dispatch(excluir(nome))}>
-            Excluir Contato
-          </TdExcluir>
-          <TdExcluir onClick={() => setEditando(true)}>
-            Editar Contato
-          </TdExcluir>
+          <BotaoTabela onClick={() => dispatch(excluir(nome))}>
+            Excluir
+          </BotaoTabela>
+          <BotaoEditar onClick={() => setEditando(true)}>Editar</BotaoEditar>
         </>
       )}
     </>

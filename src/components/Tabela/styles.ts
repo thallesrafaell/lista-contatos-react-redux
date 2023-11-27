@@ -27,6 +27,7 @@ export const Td = styled.td`
   white-space: nowrap;
 `
 export const BotaoTabela = styled(Botao)`
+  width: 90px;
   margin: 20px 10px 0;
   &:hover {
     background-color: red;
@@ -63,4 +64,9 @@ export const TextArea = styled.textarea`
   white-space: nowrap;
   width: 240px;
   background-color: #f0f0f0;
+`
+export const BotaoSalvar = styled(BotaoTabela)`
+  &:hover {
+    background-color: green;
+  }
 `
