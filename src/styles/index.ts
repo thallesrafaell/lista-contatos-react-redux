@@ -40,3 +40,7 @@ export const Botao = styled.button`
     transition-duration: 0.5s;
   }
 `
+export const Title = styled.h1`
+  text-align: center;
+  padding: 30px 0 25px;
+`
