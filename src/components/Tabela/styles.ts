@@ -44,3 +44,13 @@ export const BotaoEditar = styled(Botao)`
     border-color: transparent;
   }
 `
+
+export const TdExcluir = styled(Td)`
+  padding: 20px 5px 5px;
+  border: 1.5px solid white;
+  background-color: red;
+  border-radius: 5px;
+  color: white;
+
+  cursor: pointer;
+`

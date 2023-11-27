@@ -40,10 +40,15 @@ const contatosSlice = createSlice({
         console.log(action.payload)
         console.log(state)
       }
+    },
+    excluir: (state, action: PayloadAction<string>) => {
+      state.itens = [
+        ...state.itens.filter((contato) => contato.nome !== action.payload)
+      ]
     }
   }
 })
 
-export const { cadastrar } = contatosSlice.actions
+export const { cadastrar, excluir } = contatosSlice.actions
 
 export default contatosSlice.reducer

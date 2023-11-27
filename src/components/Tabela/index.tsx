@@ -1,32 +1,26 @@
 import { useSelector } from 'react-redux'
 
 import { RootReducer } from '../../store'
+import { excluir } from '../../store/reducers/contatos'
+import { useDispatch } from 'react-redux'
 
-import { Table, Td, Th } from './styles'
+import { Table, Td, Th, TdExcluir } from './styles'
+import Contatos from '../../models/Contatos'
 
-const Tabela = () => {
+type Props = Contatos
+
+const Tabela = ({ nome, numero, email }: Props) => {
   const { itens } = useSelector((state: RootReducer) => state.cadastra)
+  const dispatch = useDispatch()
 
   return (
     <>
-      <Table cellSpacing={0}>
-        <thead>
-          <tr>
-            <Th>Nome </Th>
-            <Th>Telefone</Th>
-            <Th>E-mail</Th>
-          </tr>
-        </thead>
-        <tbody>
-          {itens.map((contato) => (
-            <tr key={contato.nome}>
-              <Td>{contato.nome}</Td>
-              <Td>{contato.email}</Td>
-              <Td>{contato.numero}</Td>
-            </tr>
-          ))}
-        </tbody>
-      </Table>
+      <Td>{nome}</Td>
+      <Td>{email}</Td>
+      <Td>{numero}</Td>
+      <TdExcluir onClick={() => dispatch(excluir(nome))}>
+        Excluir Contato
+      </TdExcluir>
     </>
   )
 }
