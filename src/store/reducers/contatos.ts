@@ -8,17 +8,17 @@ type ContatosState = {
 const initialState: ContatosState = {
   itens: [
     {
-      nome: 'Thalles',
+      nome: 'Thalles Rafael',
       email: 'thallesrafaelf@gmail.com',
       numero: '34997653710'
     },
     {
-      nome: 'pedro',
+      nome: 'Pedro Silva',
       email: 'pedro@gmail.com',
       numero: '3499765810'
     },
     {
-      nome: 'Jao',
+      nome: 'João Henrique',
       email: 'joao@gmail.com',
       numero: '34997653910'
     }

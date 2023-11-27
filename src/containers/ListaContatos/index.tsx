@@ -10,9 +10,9 @@ const ListaContatos = () => {
       <Table cellSpacing={0}>
         <thead>
           <tr>
-            <Th>Nome </Th>
-            <Th>Telefone</Th>
+            <Th>Nome Completo </Th>
             <Th>E-mail</Th>
+            <Th>Telefone</Th>
           </tr>
         </thead>
         <tbody>

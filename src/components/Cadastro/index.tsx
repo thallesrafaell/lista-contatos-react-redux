@@ -27,7 +27,7 @@ const Cadastro = () => {
       <Inputs
         value={nome}
         type="text"
-        placeholder="Nome"
+        placeholder="Nome Completo"
         onChange={({ target }) => setNome(target.value)}
       />
       <Inputs
