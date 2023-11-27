@@ -7,15 +7,15 @@ export const EstiloGlobal = createGlobalStyle`
   box-sizing: border-box;
   font-family: Roboto, sans-serif;
 }
+
+body {
+  background-color: #f0f0f0;
+}
 `
 export const Container = styled.div`
   max-width: 1024px;
   width: 100%;
   margin: 0 auto;
-
-  body {
-    bakground-color: #f0f0f0;
-  }
 `
 export const Botao = styled.button`
   diplay:flex;

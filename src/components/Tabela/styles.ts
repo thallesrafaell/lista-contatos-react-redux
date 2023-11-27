@@ -54,3 +54,13 @@ export const TdExcluir = styled(Td)`
 
   cursor: pointer;
 `
+
+export const TextArea = styled.textarea`
+  resize: none;
+  border: none;
+  text-align: center;
+  font-size: 18px;
+  white-space: nowrap;
+  width: 240px;
+  background-color: #f0f0f0;
+`
