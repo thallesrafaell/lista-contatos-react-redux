@@ -10,17 +10,17 @@ const initialState: ContatosState = {
     {
       nome: 'Thalles',
       email: 'thallesrafaelf@gmail.com',
-      numero: 34997653710
+      numero: '34997653710'
     },
     {
       nome: 'pedro',
       email: 'pedro@gmail.com',
-      numero: 3499765810
+      numero: '3499765810'
     },
     {
       nome: 'Jao',
       email: 'joao@gmail.com',
-      numero: 34997653910
+      numero: '34997653910'
     }
   ]
 }
@@ -31,16 +31,19 @@ const contatosSlice = createSlice({
   reducers: {
     cadastrar: (state, action: PayloadAction<Contatos>) => {
       const contatoExiste = state.itens.find((contato) => {
-        contato.numero === action.payload.numero
-        if (contatoExiste) {
-          return alert('Contato Já Adcionado na lista')
-        } else {
-          state.itens.push(action.payload)
-        }
+        return contato.nome.toLowerCase() === action.payload.nome.toLowerCase()
       })
+      if (contatoExiste) {
+        alert('Contato Já Adcionado na lista')
+      } else {
+        state.itens.push(action.payload)
+        console.log(action.payload)
+        console.log(state)
+      }
     }
   }
 })
 
 export const { cadastrar } = contatosSlice.actions
+
 export default contatosSlice.reducer
