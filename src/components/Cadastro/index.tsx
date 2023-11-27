@@ -25,18 +25,21 @@ const Cadastro = () => {
   return (
     <Form onSubmit={cadastrarTarefa}>
       <Inputs
+        required
         value={nome}
         type="text"
         placeholder="Nome Completo"
         onChange={({ target }) => setNome(target.value)}
       />
       <Inputs
+        required
         value={numero}
         type="text"
         placeholder="Telefone/Celular"
         onChange={({ target }) => setNumero(target.value)}
       />
       <Inputs
+        required
         value={email}
         type="text"
         placeholder="E-mail"
