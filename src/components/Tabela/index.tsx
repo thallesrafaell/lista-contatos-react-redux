@@ -2,14 +2,7 @@ import { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 
 import { excluir, editar } from '../../store/reducers/contatos'
-import {
-  BotaoEditar,
-  BotaoSalvar,
-  BotaoTabela,
-  Td,
-  TdExcluir,
-  TextArea
-} from './styles'
+import { BotaoEditar, BotaoSalvar, BotaoTabela, Td, TextArea } from './styles'
 import Contatos from '../../models/Contatos'
 
 type Props = Contatos
